@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "title": "Pulp fiction",
+        "imagens": [
+            "/assets/Filmes/Filme1/imagem1.jpg",
+            "/assets/Filmes/Filme1/imagem2.jpg",
+            "/assets/Filmes/Filme1/imagem3.jpg",
+            "/assets/Filmes/Filme1/imagem4.jpg",
+            "/assets/Filmes/Filme1/imagem5.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Magnólia",
+        "imagens": [
+            "/assets/Filmes/Filme2/imagem1.jpg",
+            "/assets/Filmes/Filme2/imagem2.jpg",
+            "/assets/Filmes/Filme2/imagem3.jpg",
+            "/assets/Filmes/Filme2/imagem4.jpg",
+            "/assets/Filmes/Filme2/imagem5.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Kill Bill",
+        "imagens": [
+            "/assets/Filmes/Filme1/imagem1.jpg",
+            "/assets/Filmes/Filme1/imagem2.jpg",
+            "/assets/Filmes/Filme1/imagem3.jpg",
+            "/assets/Filmes/Filme1/imagem4.jpg",
+            "/assets/Filmes/Filme1/imagem5.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Entre facas e segredos",
+        "imagens": [
+            "/assets/Filmes/Filme1/imagem1.jpg",
+            "/assets/Filmes/Filme1/imagem2.jpg",
+            "/assets/Filmes/Filme1/imagem3.jpg",
+            "/assets/Filmes/Filme1/imagem4.jpg",
+            "/assets/Filmes/Filme1/imagem5.jpg"
+        ]
+    }
+]

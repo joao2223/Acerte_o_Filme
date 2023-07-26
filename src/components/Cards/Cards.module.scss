@@ -1,0 +1,23 @@
+.cards {
+    margin-right: 10rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    border-color: lavender;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 130px;
+    height: 130px;
+    background-color: lavender;
+}
+
+.card:hover{
+    cursor: pointer;
+}
