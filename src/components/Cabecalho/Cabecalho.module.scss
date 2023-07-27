@@ -17,3 +17,9 @@
     justify-content: space-around;
 }
 
+@media screen and (max-width: 600px) {
+    .container {
+      margin: 0em 0em;
+    }
+
+}
