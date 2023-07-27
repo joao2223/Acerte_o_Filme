@@ -1,20 +1,78 @@
 .container {
     margin-right: 20rem;
     margin-left: 20rem;
-}
-
-.botao_icone {
+  }
+  
+  .botao_icone {
     border: none;
     background-color: #0f172a;
-}
-
-.botao_icone:hover {
+  }
+  
+  .botao_icone:hover {
     cursor: pointer;
-}
-
-.icons {
+  }
+  
+  .icons {
     display: flex;
     justify-content: space-around;
+  }
+  
+.esconde{ 
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    margin-left: 33%;
+    margin-top: 3%;
+    background-color: #334155;
+    width: 30%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: white;
+}
+
+.cabecalho_modal {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.botao_fecha {
+  background-color: #334155;
+  border: none;
+  color: white;
+  font-size: 16px
+}
+
+.botao_fecha:hover {
+  cursor: pointer;
+}
+
+.titulo_modal {
+  font-family: 'roboto';
+  color: white;
+  padding-right:15rem;
+}
+
+.informacao {
+  display: flex;
+  flex-direction: row;
+}
+
+.imagem_info {
+  padding-right: 1rem;
+}
+
+.texto_info {
+  font-family: 'roboto';
+  color: white;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 600px) {
