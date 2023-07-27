@@ -1,7 +1,8 @@
 .titulo {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'roboto';
     font-size: 24px;
+    color: white;
 }
 
 .container_filme {
@@ -27,14 +28,15 @@
 
 .numero_imagem {
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'roboto';
     border-radius: 8px;
-    border-color: lavender;
+    border-color: #475569;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
     width: 50px;
     height: 50px;
-    background-color: lavender;
+    background-color: #475569;
+    color: white;
 }
 
 .numero_imagem:hover {
@@ -43,7 +45,7 @@
 
 .numero_imagem_errado {
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'roboto';
     border-radius: 8px;
     border-color: red;
     margin-right: 0.5rem;
@@ -51,6 +53,7 @@
     width: 50px;
     height: 50px;
     background-color: red;
+    color: white;
 }
 
 .numero_imagem_errado:hover {
@@ -59,7 +62,7 @@
 
 .numero_imagem_certo {
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'roboto';
     border-radius: 8px;
     border-color: green;
     margin-right: 0.5rem;
@@ -67,6 +70,7 @@
     width: 50px;
     height: 50px;
     background-color: green;
+    color: white;
 }
 
 .numero_imagem_certo:hover {
@@ -82,17 +86,22 @@
 }
 
 .input {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    width: 300px;
+    font-family: 'roboto';
+    font-size: 24px;
+    width: 500px;
     height: 32px;
 }
 
 .botao_submit {
-    background-color: lavender;
-    font-family: 'Courier New', Courier, monospace;
+    background-color: green;
+    font-family: 'roboto';
     border-radius: 4px;
-    border-color: lavender;
+    border-color: green;
+    font-size: 24px;
+    padding: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color:white;
 }
 
 .botao_submit:hover {
@@ -107,14 +116,14 @@
 }
 
 .texto_resultado {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'roboto';
     font-size: 24px;
 }
 
 
 
 .texto_resultado_resposta {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'roboto';
     font-size: 24px;
     font-weight: 600;
 }
@@ -127,7 +136,7 @@
     }
 
     .texto_resultado {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'roboto';
         font-size: 24px;
     }
     
