@@ -25,22 +25,33 @@
         "id": 3,
         "title": "Kill Bill",
         "imagens": [
-            "/assets/Filmes/Filme1/imagem1.jpg",
-            "/assets/Filmes/Filme1/imagem2.jpg",
-            "/assets/Filmes/Filme1/imagem3.jpg",
-            "/assets/Filmes/Filme1/imagem4.jpg",
-            "/assets/Filmes/Filme1/imagem5.jpg"
+            "/assets/Filmes/Filme3/imagem1.jpg",
+            "/assets/Filmes/Filme3/imagem2.jpg",
+            "/assets/Filmes/Filme3/imagem3.jpg",
+            "/assets/Filmes/Filme3/imagem4.jpg",
+            "/assets/Filmes/Filme3/imagem5.jpg"
         ]
     },
     {
         "id": 4,
         "title": "Entre facas e segredos",
         "imagens": [
-            "/assets/Filmes/Filme1/imagem1.jpg",
-            "/assets/Filmes/Filme1/imagem2.jpg",
-            "/assets/Filmes/Filme1/imagem3.jpg",
-            "/assets/Filmes/Filme1/imagem4.jpg",
-            "/assets/Filmes/Filme1/imagem5.jpg"
+            "/assets/Filmes/Filme4/imagem1.jpg",
+            "/assets/Filmes/Filme4/imagem2.jpg",
+            "/assets/Filmes/Filme4/imagem3.jpg",
+            "/assets/Filmes/Filme4/imagem4.jpg",
+            "/assets/Filmes/Filme4/imagem5.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Projeto almanaque",
+        "imagens": [
+            "/assets/Filmes/Filme5/imagem1.jpg",
+            "/assets/Filmes/Filme5/imagem2.jpg",
+            "/assets/Filmes/Filme5/imagem3.jpg",
+            "/assets/Filmes/Filme5/imagem4.jpg",
+            "/assets/Filmes/Filme5/imagem5.jpg"
         ]
     }
 ]
