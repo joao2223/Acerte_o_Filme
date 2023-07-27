@@ -4,7 +4,6 @@ import filmes from '../../data/filmes.json'
 import Inicio from "../Inicio"
 import { useState } from "react"
 
-
 export default function Filme() {
     const { id } = useParams()
     const filme = filmes.find(item => item.id === Number(id))
@@ -48,9 +47,11 @@ export default function Filme() {
                         {filme.imagens?.map((_, index) => (
                             <button
                                 key={index}
-                                className={index + 1 === contador ? (respostaErrada ? styles.numero_imagem_errado : styles.numero_imagem_certo) : styles.numero_imagem}
+                                className={index + 1 === contador 
+                                    ? (respostaErrada ? styles.numero_imagem_errado : styles.numero_imagem_certo) 
+                                    : index < contador ? styles.numero_imagem_errado : styles.numero_imagem}
                                 onClick={() => {
-                                    if (index + 1 < contador) {
+                                    if (index -1 < contador) {
                                         setImagem(index)
                                     }
                                 }
