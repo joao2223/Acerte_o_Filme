@@ -3,6 +3,15 @@
     margin-left: 20rem;
 }
 
+.botao_icone {
+    border: none;
+    background-color: lightslategray;
+}
+
+.botao_icone:hover {
+    cursor: pointer;
+}
+
 .icons {
     display: flex;
     justify-content: space-around;
