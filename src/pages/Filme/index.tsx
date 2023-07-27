@@ -1,17 +1,38 @@
-import { Route, Routes, useNavigate, useParams } from "react-router-dom"
-import styles from './Filme.module.scss'
-import filmes from '../../data/filmes.json'
-import Inicio from "../Inicio"
-import { useState } from "react"
+import { useEffect, useState } from "react";
+import { Route, Routes, useNavigate, useParams } from "react-router-dom";
+import styles from './Filme.module.scss';
+import filmes from '../../data/filmes.json';
+import Inicio from "../Inicio";
 
 export default function Filme() {
-    const { id } = useParams()
-    const filme = filmes.find(item => item.id === Number(id))
-    const [imagem, setImagem] = useState(0)
-    const [nomeFilme, setNomeFilme] = useState('')
-    const [contador, setContador] = useState(0)
-    const [respostaErrada, setRespostaErrada] = useState(false)
-    const [terminou, setTerminou] = useState(false)
+    const { id } = useParams();
+    const filme = filmes.find(item => item.id === Number(id));
+    const [imagem, setImagem] = useState(0);
+    const [nomeFilme, setNomeFilme] = useState('');
+    const [contador, setContador] = useState(0);
+    const [respostaErrada, setRespostaErrada] = useState(false);
+    const [terminou, setTerminou] = useState(false);
+
+    useEffect(() => {
+        const estadoFilmeArmazenado = localStorage.getItem(`estadoFilme_${id}`)
+        if (estadoFilmeArmazenado) {
+            const estadoFilmeParseado = JSON.parse(estadoFilmeArmazenado)
+            setContador(estadoFilmeParseado.contador)
+            setRespostaErrada(estadoFilmeParseado.respostaErrada)
+            setTerminou(estadoFilmeParseado.terminou)
+        }
+    }, [id])
+
+    useEffect(() => {
+        if (terminou) {
+            const estadoFilmeParaArmazenar = {
+                contador: contador,
+                respostaErrada: respostaErrada,
+                terminou: terminou
+            };
+            localStorage.setItem(`estadoFilme_${id}`, JSON.stringify(estadoFilmeParaArmazenar))
+        }
+    }, [id, contador, respostaErrada, terminou])
 
     if (!filme) {
         return <Inicio />
@@ -47,15 +68,14 @@ export default function Filme() {
                         {filme.imagens?.map((_, index) => (
                             <button
                                 key={index}
-                                className={index + 1 === contador 
-                                    ? (respostaErrada ? styles.numero_imagem_errado : styles.numero_imagem_certo) 
+                                className={index + 1 === contador
+                                    ? (respostaErrada ? styles.numero_imagem_errado : styles.numero_imagem_certo)
                                     : index < contador ? styles.numero_imagem_errado : styles.numero_imagem}
                                 onClick={() => {
-                                    if (index -1 < contador) {
-                                        setImagem(index)
+                                    if (index - 1 < contador || terminou) {
+                                        setImagem(index);
                                     }
-                                }
-                                }
+                                }}
                             >
                                 {index + 1}
                             </button>
@@ -63,25 +83,25 @@ export default function Filme() {
                     </div>
                     <form className={terminou ? styles.esconde : styles.container_input}>
                         <input type="text" className={styles.input} placeholder='Digite o nome do filme' onChange={(evento) => {
-                            setNomeFilme(evento.target.value)
+                            setNomeFilme(evento.target.value);
                         }} />
-
                         <button className={styles.botao_submit} onClick={(event) => {
-                            event.preventDefault()
-                            verificaFilme()
+                            event.preventDefault();
+                            verificaFilme();
                         }}>
                             Submit
                         </button>
                     </form>
-                    <div className={terminou && !respostaErrada ? styles.resultado_ganha : styles.esconde}>
+                    <div className={terminou && !respostaErrada ? styles.resultado : styles.esconde}>
                         <p className={styles.texto_resultado}>Você acertou!</p>
+                        <p className={styles.texto_resultado_resposta}>{filme.title}</p>
                     </div>
-                    <div className={terminou && respostaErrada ? styles.resultado_perde : styles.esconde}>
+                    <div className={terminou && respostaErrada ? styles.resultado : styles.esconde}>
                         <p className={styles.texto_resultado}>A resposta certa é:</p>
                         <p className={styles.texto_resultado_resposta}>{filme.title}</p>
                     </div>
                 </>
             } />
         </Routes>
-    )
+    );
 }
