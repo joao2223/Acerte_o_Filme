@@ -118,3 +118,20 @@
     font-size: 24px;
     font-weight: 600;
 }
+
+
+@media screen and (max-width: 600px) {
+    .imagem_filme {
+        width: 100vw;
+        height: 300px;
+        margin-bottom: 2rem;
+    }
+
+    .texto_resultado {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 24px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+}
