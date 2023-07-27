@@ -11,7 +11,8 @@ export default function Filme() {
     const [imagem, setImagem] = useState(0)
     const [nomeFilme, setNomeFilme] = useState('')
     const [contador, setContador] = useState(0)
-    const [respostaErrada,setRespostaErrada] = useState(false)
+    const [respostaErrada, setRespostaErrada] = useState(false)
+    const [terminou, setTerminou] = useState(false)
 
     if (!filme) {
         return <Inicio />
@@ -22,6 +23,7 @@ export default function Filme() {
             alert('acertou')
             setContador(prevContador => prevContador + 1)
             setRespostaErrada(false)
+            setTerminou(true)
         }
         else {
             if (imagem != 4) {
@@ -31,6 +33,7 @@ export default function Filme() {
             setContador(prevContador => prevContador + 1)
             if (contador == 4) {
                 alert('voce perdeu')
+                setTerminou(true)
             }
         }
     }
@@ -54,7 +57,7 @@ export default function Filme() {
                             </button>
                         ))}
                     </div>
-                    <form className={styles.container_input}>
+                    <form className={terminou ? styles.esconde : styles.container_input}>
                         <input type="text" className={styles.input} placeholder='Digite o nome do filme' onChange={(evento) => {
                             setNomeFilme(evento.target.value)
                         }} />
@@ -66,6 +69,13 @@ export default function Filme() {
                             Submit
                         </button>
                     </form>
+                    <div className={terminou && !respostaErrada ? styles.resultado_ganha : styles.esconde}>
+                        <p className={styles.texto_resultado}>Você acertou!</p>
+                    </div>
+                    <div className={terminou && respostaErrada ? styles.resultado_perde : styles.esconde}>
+                        <p className={styles.texto_resultado}>A resposta certa é:</p>
+                        <p className={styles.texto_resultado_resposta}>{filme.title}</p>
+                    </div>
                 </>
             } />
         </Routes>
