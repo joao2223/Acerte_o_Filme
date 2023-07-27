@@ -21,13 +21,8 @@
 }
 
 
-.botao_seta {
-    border: none;
-    background-color: lightslategray;
-}
-
-.botao_seta:hover {
-    cursor: pointer;
+.esconde {
+    display: none;
 }
 
 .numero_imagem {
@@ -92,4 +87,27 @@
 
 .botao_submit:hover {
     cursor: pointer;
+}
+
+.resultado_ganha {
+    display: flex;
+    justify-content: center;
+}
+
+.texto_resultado {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+}
+
+.resultado_perde {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto_resultado_resposta {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: 600;
 }
