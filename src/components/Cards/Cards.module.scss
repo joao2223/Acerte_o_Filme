@@ -21,3 +21,26 @@
 .card:hover{
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    .cards {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        font-size: 16px;
+        font-family: 'Courier New', Courier, monospace;
+        border-radius: 8px;
+        border-color: lavender;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        width: 96px;
+        height: 96px;
+        background-color: lavender;
+    }
+
+}
