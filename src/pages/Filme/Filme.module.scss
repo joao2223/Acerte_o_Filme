@@ -42,6 +42,30 @@
     background-color: lavender;
 }
 
+.numero_imagem_errado {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    border-color: red;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.numero_imagem_certo {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    border-color: green;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+}
+
 .numero_imagem:hover {
     cursor: pointer;
 }
