@@ -20,7 +20,6 @@ export default function Filme() {
 
     const verificaFilme = () => {
         if (nomeFilme.toLowerCase() == filme.title.toLowerCase()) {
-            alert('acertou')
             setContador(prevContador => prevContador + 1)
             setRespostaErrada(false)
             setTerminou(true)
@@ -32,7 +31,6 @@ export default function Filme() {
             }
             setContador(prevContador => prevContador + 1)
             if (contador == 4) {
-                alert('voce perdeu')
                 setTerminou(true)
             }
         }
@@ -51,7 +49,12 @@ export default function Filme() {
                             <button
                                 key={index}
                                 className={index + 1 === contador ? (respostaErrada ? styles.numero_imagem_errado : styles.numero_imagem_certo) : styles.numero_imagem}
-                                onClick={() => setImagem(index)}
+                                onClick={() => {
+                                    if (index + 1 < contador) {
+                                        setImagem(index)
+                                    }
+                                }
+                                }
                             >
                                 {index + 1}
                             </button>
