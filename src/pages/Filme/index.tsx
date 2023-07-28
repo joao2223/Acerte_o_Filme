@@ -12,6 +12,7 @@ export default function Filme() {
     const [contador, setContador] = useState(0);
     const [respostaErrada, setRespostaErrada] = useState(false);
     const [terminou, setTerminou] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const estadoFilmeArmazenado = localStorage.getItem(`estadoFilme_${id}`)
@@ -24,6 +25,16 @@ export default function Filme() {
     }, [id])
 
     useEffect(() => {
+        function voltaInicio() {
+            navigate('/')
+        }
+        window.addEventListener('popstate', voltaInicio)
+        return () => {
+            window.removeEventListener('popstate', voltaInicio)
+        }
+    }, [])
+
+    useEffect(() => {
         if (terminou) {
             const estadoFilmeParaArmazenar = {
                 contador: contador,
@@ -33,6 +44,7 @@ export default function Filme() {
             localStorage.setItem(`estadoFilme_${id}`, JSON.stringify(estadoFilmeParaArmazenar))
         }
     }, [id, contador, respostaErrada, terminou])
+    localStorage.clear()
 
     if (!filme) {
         return <Inicio />
@@ -97,7 +109,7 @@ export default function Filme() {
                         <p className={styles.texto_resultado_resposta}>{filme.title}</p>
                     </div>
                     <div className={terminou && respostaErrada ? styles.resultado : styles.esconde}>
-                        <p className={styles.texto_resultado}>A resposta certa é:</p>
+                        <p className={styles.texto_resultado}>A resposta certa é:<br /></p>
                         <p className={styles.texto_resultado_resposta}>{filme.title}</p>
                     </div>
                 </>
