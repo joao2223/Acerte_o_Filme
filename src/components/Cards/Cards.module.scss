@@ -19,29 +19,73 @@
     color: white;
 }
 
-.card:hover{
+.card:hover {
     cursor: pointer;
 }
+
+.card_errou {
+    font-size: 20px;
+    font-family: 'roboto';
+    border-radius: 8px;
+    border-color: rgb(184, 3, 3);
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 130px;
+    height: 130px;
+    background-color: rgb(184, 3, 3);
+    color: white;
+}
+
+.card_errou:hover {
+    cursor: pointer;
+}
+
+.card_acertou {
+    font-size: 20px;
+    font-family: 'roboto';
+    border-radius: 8px;
+    border-color: rgb(0, 88, 0);
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 130px;
+    height: 130px;
+    background-color: rgb(0, 88, 0);
+    color: white;
+}
+
+.card_acertou:hover {
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 600px) {
     .cards {
         margin-right: 1rem;
         margin-left: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
     }
 
     .card {
         font-size: 16px;
-        font-family: 'Courier New', Courier, monospace;
-        border-radius: 8px;
-        border-color: #475569;
         margin-right: 1rem;
         margin-bottom: 1rem;
         width: 5rem;
         height: 5rem;
-        background-color: #475569;
+    }
+
+    .card_errou {
+        font-size: 16px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .card_acertou {
+        font-size: 16px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        width: 5rem;
+        height: 5rem;
     }
 
 }

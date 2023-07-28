@@ -7,12 +7,13 @@ import Inicio from "../Inicio";
 export default function Filme() {
     const { id } = useParams();
     const filme = filmes.find(item => item.id === Number(id));
-    const [imagem, setImagem] = useState(0);
-    const [nomeFilme, setNomeFilme] = useState('');
-    const [contador, setContador] = useState(0);
-    const [respostaErrada, setRespostaErrada] = useState(false);
-    const [terminou, setTerminou] = useState(false);
+    const [imagem, setImagem] = useState<number>(0);
+    const [nomeFilme, setNomeFilme] = useState<string>('');
+    const [contador, setContador] = useState<number>(0);
+    const [respostaErrada, setRespostaErrada] = useState<boolean>(false);
+    const [terminou, setTerminou] = useState<boolean>(false);
     const navigate = useNavigate();
+    
 
     useEffect(() => {
         const estadoFilmeArmazenado = localStorage.getItem(`estadoFilme_${id}`)
@@ -39,11 +40,13 @@ export default function Filme() {
             const estadoFilmeParaArmazenar = {
                 contador: contador,
                 respostaErrada: respostaErrada,
-                terminou: terminou
+                terminou: terminou,
+                id:id
             };
             localStorage.setItem(`estadoFilme_${id}`, JSON.stringify(estadoFilmeParaArmazenar))
         }
     }, [id, contador, respostaErrada, terminou])
+   
 
     if (!filme) {
         return <Inicio />

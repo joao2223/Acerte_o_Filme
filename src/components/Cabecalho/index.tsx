@@ -1,5 +1,4 @@
 import styles from './Cabecalho.module.scss'
-import user from '../../assets/Cabecalho/user.svg'
 import eye from '../../assets/Cabecalho/eye.svg'
 import question from '../../assets/Cabecalho/question.svg'
 import desk from '../../assets/Cabecalho/desk.svg'
@@ -10,14 +9,16 @@ import { useState } from 'react'
 
 export default function Cabecalho() {
     const navigate = useNavigate()
-    const [show, setShow] = useState(false)
-
+    const [show, setShow] = useState<boolean>(false)
 
     function redirecionarParaInicio() {
         navigate('/')
     }
-    const fecharModal = () => setShow(false);
-    const abrirModal = () => {
+
+    function fecharModal() {
+        setShow(false)
+    }
+    function abrirModal(){
         setShow(true);
     }
 
@@ -32,8 +33,6 @@ export default function Cabecalho() {
                     <button className={styles.botao_icone} onClick={() => abrirModal()}>
                         <img src={question} alt="" />
                     </button>
-                    <img src={user} alt="" />
-
                 </div>
 
             </div>
