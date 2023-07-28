@@ -79,5 +79,59 @@
     .container {
       margin: 0em 0em;
     }
+    .modal {
+      position: absolute;
+      margin-top: 3%;
+      margin: auto;
+      background-color: #334155;
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border: solid 1px;
+      border-radius: 8px;
+      border-color: white;
+  }
+  
+  .cabecalho_modal {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    
+  }
+  
+  .botao_fecha {
+    background-color: #334155;
+    border: none;
+    color: white;
+    font-size: 16px
+  }
+  
+  .botao_fecha:hover {
+    cursor: pointer;
+  }
+  
+  .titulo_modal {
+    font-family: 'roboto';
+    color: white;
+    padding-right:8rem;
+  }
+  
+  .informacao {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .imagem_info {
+    padding-right: 1rem;
+  }
+  
+  .texto_info {
+    font-family: 'roboto';
+    color: white;
+    font-size: 16px;
+  }
 
 }
