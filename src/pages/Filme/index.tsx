@@ -44,7 +44,6 @@ export default function Filme() {
             localStorage.setItem(`estadoFilme_${id}`, JSON.stringify(estadoFilmeParaArmazenar))
         }
     }, [id, contador, respostaErrada, terminou])
-    localStorage.clear()
 
     if (!filme) {
         return <Inicio />
